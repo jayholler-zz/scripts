@@ -30,7 +30,6 @@ if [[ "$myFile" =~ ([A-Za-z0-9\.]*)\.(S..E..).*.avi ]] ; then
         [ -d "$storageDir/$ShowName" ] || mkdir -v "$storageDir/$ShowName"
         mv -v $myFile "$storageDir/$ShowName/$ShowName.$File"
         chmod +r "$storageDir/$ShowName/$ShowName.$File"
-        #wget http://localhost:49153/web/ushare.cgi?action=refresh
         #notify-send -t 3000 -i /usr/share/icons/gnome/scalable/mimetypes/video-x-generic.svg "`basename $0`" "`cat /tmp/emailmessage.txt`"
 	/usr/local/bin/prowl.pl -application="`basename $0`" -event="Done" -notification="`cat /tmp/emailmessage.txt`"
 #        /usr/local/bin/email.sh
@@ -63,7 +62,6 @@ if [[ "$myFile" =~ ([A-Za-z0-9\.]*)\.(S..E..).*.mkv ]] ; then
         [ -d "$storageDir/$ShowName" ] || mkdir -v "$storageDir/$ShowName"
         mv -v $myFile "$storageDir/$ShowName/$ShowName.$File"
 	chmod +r "$storageDir/$ShowName/$ShowName.$File"
-        #wget http://localhost:49153/web/ushare.cgi?action=refresh
         #notify-send -t 3000 -i /usr/share/icons/gnome/scalable/mimetypes/video-x-generic.svg "`basename $0`" "`cat /tmp/emailmessage.txt`"
 	/usr/local/bin/prowl.pl -application="`basename $0`" -event="Done" -notification="`cat /tmp/emailmessage.txt`"
 #        /usr/local/bin/email.sh
